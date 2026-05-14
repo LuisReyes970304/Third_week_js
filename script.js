@@ -3,10 +3,7 @@ const inputNote = formNote.querySelector(".input");
 const notes = document.querySelector(".notes");
 
 document.addEventListener("DOMContentLoaded", () => {
-    const getData = localStorage.getItem("data");
-    if(getData && getData.trim() != "") {
-        notes.innerHTML = getData;
-    };
+    notes.innerHTML = localStorage.getItem("data") || "";
 });
 
 formNote.addEventListener("submit", (e) => {

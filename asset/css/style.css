@@ -10,6 +10,7 @@
 
 body {
   width: 100vw;
+  height: 100vh;
 }
 body header {
   background-color: var(--div);
@@ -18,6 +19,38 @@ body header {
   justify-content: center;
   width: 100%;
   height: 55px;
+  position: fixed;
+}
+body main {
+  padding-top: 70px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main .entry {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .entry fieldset {
+  height: 100%;
+  width: 90%;
+}
+body main .entry fieldset legend {
+  margin: auto;
+}
+body main .listNote {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
