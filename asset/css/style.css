@@ -5,12 +5,16 @@
 }
 
 :root {
-  --div: rgb(201, 48, 10);
+  --div: rgba(236, 198, 72, 0.918);
+  --background: rgb(50, 50, 50);
+  --hover: rgb(85, 75, 55);
+  --shadow: rgb(210, 150, 100);
 }
 
 body {
   width: 100vw;
   height: 100vh;
+  background-color: var(--background);
 }
 body header {
   background-color: var(--div);
@@ -31,7 +35,7 @@ body main {
   flex-direction: column;
 }
 body main .entry {
-  height: 50%;
+  height: 40%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -40,17 +44,93 @@ body main .entry {
 body main .entry fieldset {
   height: 100%;
   width: 90%;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 body main .entry fieldset legend {
   margin: auto;
 }
-body main .listNote {
-  height: 50%;
+body main .entry fieldset form {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body main .entry fieldset form input {
+  display: flex;
+  border-radius: 8px;
+  height: 50px;
+  border: none;
+  width: 80%;
+}
+body main .entry fieldset form input[type=submit] {
+  width: 80px;
+}
+body main .list {
+  height: 60%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+body main .list h2 {
+  background-color: var(--div);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+body main .list ul {
+  height: 90%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-y: auto;
+  width: 90%;
+  gap: 20px;
+}
+body main .list ul li {
+  flex-shrink: 0;
+  background-color: var(--div);
+  list-style: none;
+  height: 350px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 8px;
+  transition: ease-in-out 0.2s;
+}
+body main .list ul li:hover {
+  transform: scale(1.05);
+}
+body main .list ul li button {
+  display: flex;
+  align-self: end;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  height: 40px;
+  width: 40Px;
+  font-size: x-large;
+  border-radius: 50%;
+  border: none;
+  transition: ease-in-out 0.2s;
+  color: var(--div);
+}
+body main .list ul li button:hover {
+  transform: scale(1.1);
+  border-radius: 40%;
+  background-color: var(--hover);
+}
+body main .list ul li p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

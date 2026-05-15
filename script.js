@@ -12,7 +12,9 @@ formNote.addEventListener("submit", (e) => {
     inputNote.value = "";
     if(data != "") {
         createNote(notes, data);
+        console.log("Added bro, you did it");
     } else { 
+        console.log("You have to write something bro!! ya..\nYou know what I mean");
         return;
     }
 });
